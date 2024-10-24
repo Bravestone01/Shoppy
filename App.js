@@ -1,19 +1,29 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View,KeyboardAvoidingView } from 'react-native';
+import AppNavigation from './Navigation/AppNavigation';
+import HomeScreen from './screens/HomeScreen';
+import BottomNavigator from './Navigation/BottomNavigator';
+import Toast from 'react-native-toast-message';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+    
+   <NavigationContainer>
+    
+    <AppNavigation/>
+    {/* <BottomNavigator/> */}
+    <Toast/>
+   </NavigationContainer>
+  
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
